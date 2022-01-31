@@ -48,6 +48,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this,"Data Added",Toast.LENGTH_SHORT).show()
             multiDeleteAdapter.notifyItemInserted(dataSet.size-1)
             recyclerView.scrollToPosition(dataSet.size-1 )
+
         }
     }
     private fun showDeleteMenu(show:Boolean){
