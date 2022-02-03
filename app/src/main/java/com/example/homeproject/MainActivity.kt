@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         val dataSet= ArrayList<MultiDeleteModel>()
         dataSet.add(MultiDeleteModel("Mango",false))
         dataSet.add(MultiDeleteModel("PineApple",false))
+
 //        dataSet.add(MultiDeleteModel("Papaya",false))
 //        dataSet.add(MultiDeleteModel("Grapes",false))
 //        dataSet.add(MultiDeleteModel("Apple",false))
