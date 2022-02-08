@@ -24,6 +24,8 @@ class MainRecyclerAdapter(private val context: Context,private val allCategory: 
     override fun getItemCount(): Int {
         return allCategory.size
     }
+
+
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.categoryTittle.text=allCategory[position].categoryTittle
         setCatItemRecycler(holder.itemRecyclerView,allCategory[position].categoryItem)
