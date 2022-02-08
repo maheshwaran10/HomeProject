@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homeproject.R
@@ -29,7 +30,7 @@ class MainRecyclerAdapter(private val context: Context,private val allCategory: 
     }
     private fun setCatItemRecycler(recyclerView: RecyclerView,categoryItem:List<CategoryItem>){
         val itemRecyclerAdapter=CategoryItemAdapter(context,categoryItem)
-        recyclerView.layoutManager=LinearLayoutManager(context,RecyclerView.HORIZONTAL,false)
+        recyclerView.layoutManager=GridLayoutManager(context,2,RecyclerView.HORIZONTAL,false)
         recyclerView.adapter=itemRecyclerAdapter
     }
 }
