@@ -6,14 +6,14 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 
-private const val BaseUrl = "https://makent.trioangledemo.com"
+private const val BaseUrl = "https://makent.trioangle.com/api/"
 private val retrofit = Retrofit.Builder()
     .addConverterFactory(GsonConverterFactory.create())
     .baseUrl(BaseUrl)
     .build()
 
 interface ApiInterface {
-    @GET("/api/home")
+    @GET("home")
     fun getInterface(): Call<GetData>
 }
 
