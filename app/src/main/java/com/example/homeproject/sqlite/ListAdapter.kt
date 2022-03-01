@@ -18,7 +18,7 @@ class ListAdapter(
 
     internal var inflater:LayoutInflater = activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
     override fun getCount(): Int {
-
+        TODO("Not yet implemented")
     }
 
     override fun getItem(position: Int): Any {
