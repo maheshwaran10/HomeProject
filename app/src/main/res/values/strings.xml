@@ -8,4 +8,5 @@
     <string name="showAll"><u>showAll</u></string>
     <string name="msg_loading">Loading...</string>
     <string name="uploadImages">Set your image</string>
+    <string name="lorem_ipsum_dolor_sit_n_amet_consetetur">Lorem ipsum dolor sit \n amet, consetetur</string>
 </resources>
