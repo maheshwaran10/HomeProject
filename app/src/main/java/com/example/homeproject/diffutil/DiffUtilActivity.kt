@@ -21,6 +21,7 @@ class DiffUtilActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_diff_util)
         initView()
 
+
     }
     fun getData():ArrayList<DiffModel>{
         val diffList:ArrayList<DiffModel> = ArrayList()
