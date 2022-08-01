@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".diffutil.DiffUtilActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomItems"
+        android:layout_alignParentTop="true"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <LinearLayout
+        android:id="@+id/bottomItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/asc"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Ascend"
+            android:layout_marginEnd="@dimen/f_5"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/desc"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="descend"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/friends"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="friends"
+            android:layout_marginStart="@dimen/f_5"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
