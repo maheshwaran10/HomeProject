@@ -1,4 +1,4 @@
-package com.example.homeproject
+package com.example.homeproject.recyclerMultidelete
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.homeproject.R
 import java.util.ArrayList
 
 class MainActivity : AppCompatActivity() {
@@ -56,18 +57,19 @@ class MainActivity : AppCompatActivity() {
     mainMenu?.findItem(R.id.deleteBtn)?.isVisible=show
 
 }
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.deleteBtn ->{delete()}
+        }
+        return super.onOptionsItemSelected(item)
+    }
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
         mainMenu=menu
         menuInflater.inflate(R.menu.delete_menu,mainMenu)
         showDeleteMenu(false)
         return super.onCreateOptionsMenu(menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){
-            R.id.deleteBtn->{delete()}
-        }
-        return super.onOptionsItemSelected(item)
     }
     private fun delete(){
         val alertDialog=AlertDialog.Builder(this)

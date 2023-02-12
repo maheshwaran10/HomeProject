@@ -16,6 +16,7 @@ import kotlin.collections.ArrayList
 
 class DiffUtilActivity : AppCompatActivity(), View.OnClickListener {
     lateinit var diffAdapter: DiffAdapter
+    lateinit var nu:String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_diff_util)
@@ -23,7 +24,13 @@ class DiffUtilActivity : AppCompatActivity(), View.OnClickListener {
 
 
     }
+    companion object{
+        val name:String="Mahesh"
+    }
+
     fun getData():ArrayList<DiffModel>{
+
+
         val diffList:ArrayList<DiffModel> = ArrayList()
         diffList.add(DiffModel(1,"Ashok",45))
         diffList.add(DiffModel(2,"Prem",58))

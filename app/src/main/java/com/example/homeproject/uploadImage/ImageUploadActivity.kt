@@ -22,6 +22,7 @@ import com.bumptech.glide.Glide
 import com.example.homeproject.BuildConfig
 import com.example.homeproject.R
 import okhttp3.MediaType
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.Callback
@@ -216,7 +217,7 @@ open class ImageUploadActivity : AppCompatActivity(), View.OnClickListener {
             val file = File(postPath!!)
 
             // Parsing any Media type file
-            val requestBody = RequestBody.create(MediaType.parse("*/*"), file)
+            val requestBody = RequestBody.create("*/*".toMediaTypeOrNull(), file)
             map["file\"; filename=\"" + file.name + "\""] = requestBody
            Api.retrofitService.upload("token", map)?.enqueue(object : Callback<ServerResponse?> {
                 override fun onResponse(call: Call<ServerResponse?>, response: Response<ServerResponse?>

@@ -1,13 +1,13 @@
-package com.example.homeproject
+package com.example.homeproject.recyclerMultidelete
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
-import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.homeproject.R
 
 class MultiDeleteAdapter(private val myList: MutableList<MultiDeleteModel>
 , private val showMenuDelete:(Boolean)->Unit): RecyclerView.Adapter<MultiDeleteAdapter.ViewHolder>() {
@@ -25,7 +25,7 @@ class MultiDeleteAdapter(private val myList: MutableList<MultiDeleteModel>
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val multiDeleteModel:MultiDeleteModel=myList[position]
+        val multiDeleteModel: MultiDeleteModel =myList[position]
         holder.textView.text=multiDeleteModel.fruits
         holder.imageView.visibility= View.GONE
 
@@ -49,7 +49,7 @@ class MultiDeleteAdapter(private val myList: MutableList<MultiDeleteModel>
         }
     }
 
-    private fun selectItem(holder: MultiDeleteAdapter.ViewHolder, multiDeleteModel: MultiDeleteModel, position: Int) {
+    private fun selectItem(holder: ViewHolder, multiDeleteModel: MultiDeleteModel, position: Int) {
         isEnable=true
         itemSelectedList.add(position)
         multiDeleteModel.selected=true

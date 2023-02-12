@@ -21,19 +21,10 @@
             android:name=".firebase.FirebaseActivityActivity"
             android:exported="false" />
         <activity
-            android:name=".sqlite.SqliteActivity"
-            android:exported="false" />
-        <activity
-            android:name=".uploadActivity.UploadActivity"
-            android:exported="false" />
-        <activity
             android:name=".loadMore.LoadMoreActivity"
             android:exported="false" />
         <activity
-            android:name=".makent.NestedRecyclerActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".recyclerMultidelete.MainActivity"
             android:exported="true" />
         <activity
             android:name=".makent.MakentActivity"
@@ -52,10 +43,10 @@
             android:exported="true" />
         <activity
             android:name=".darkmode.DarkLightModeActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".diffutil.DiffUtilActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -25,6 +25,7 @@ class GetDataActivity : AppCompatActivity() {
         progressBar=findViewById(R.id.sampleProgress)
         getContent()
 
+
     }
 
     private fun getContent() {
